@@ -4,6 +4,7 @@
  
 ### Установка
 - ``git clone git@github.com:DmitryBanin/Prototype.git && cd Prototype``
+- ``npm i``
 
 ### Запуск Приложения
 - ``npm run start``
