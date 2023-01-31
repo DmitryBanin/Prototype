@@ -1,0 +1,345 @@
+@font-face {
+  font-family: 'Exo2.0 Thin';
+  src: local('Exo2.0 Thin'), url('../fonts/Exo2.0-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Trebuchet MS Regular';
+  font-weight: 400;
+  src: local('Trebuchet MS Regular'), url('../fonts/trebuc.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Trebuchet MS Bold';
+  font-weight: 700;
+  src: local('Trebuchet MS Bold'), url('../fonts/trebucbd.woff') format('woff');
+}
+
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* ------------------ */
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+body {
+  background-color: #000000;
+  background-image: url(../images/Pattern.png);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 5e-5) 49.88%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  color: #ffffff;
+}
+
+[class*='__container'] {
+  max-width: 1270px;
+  margin: 0px auto;
+  padding: 0 40px;
+}
+
+/* -----main----- */
+
+.cards-list {
+  margin-top: 36px;
+}
+
+.cards-list__title {
+  text-align: center;
+  font-family: 'Exo2.0 Thin', 'Candara Light';
+  font-size: 36px;
+  line-height: 44px;
+  text-shadow: 0px 1px 1px #000000;
+}
+
+.cards-list__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.card__wrapper {
+  max-width: 320px;
+  margin-bottom: 25px;
+}
+
+.card__link {
+  background: linear-gradient(135deg, transparent 30px, #1698d9 0) top left;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  height: 480px;
+  min-width: 320px;
+}
+
+.card__content {
+  background: linear-gradient(135deg, transparent 28px, #f2f2f2 0) top left;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 470px;
+  width: 310px;
+}
+
+.card__info {
+  margin-left: 44px;
+}
+
+.card__info span {
+  font-family: 'Trebuchet MS Bold', 'Arial';
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+
+.card__info-description {
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  font-size: 16px;
+  line-height: 18.58px;
+  color: #666666;
+  padding: 15px 0 6px 0;
+}
+
+.card__info-description.red {
+  color: #e62e7a;
+}
+
+.card__info-title {
+  font-family: 'Trebuchet MS Bold', 'Arial';
+  font-size: 48px;
+  line-height: 55.73px;
+  color: #000000;
+}
+.card__info-ingredient {
+  font-family: 'Trebuchet MS Bold', 'Arial';
+  font-size: 24px;
+  line-height: 27.87px;
+  color: #000000;
+  padding-bottom: 15px;
+}
+.card__info-portion {
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.card__info-present {
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.card__info-customer {
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+
+.card__weight {
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  background: #1698d9;
+  color: #ffffff;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  right: 14px;
+  bottom: 14px;
+}
+
+.card__weight p {
+  font-size: 42px;
+  line-height: 22px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+}
+
+.card__weight span {
+  font-size: 21px;
+  line-height: 22px;
+}
+
+.card__button-buy {
+  text-align: center;
+  font-family: 'Trebuchet MS Regular', 'Arial';
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.card__button-buy a {
+  font-family: 'Trebuchet MS Bold', 'Arial';
+  font-size: 13px;
+  line-height: 15.09px;
+  /* text-decoration: underline dashed; */
+  border-bottom: 1px dashed;
+  color: #1698d9;
+}
+
+.card__image {
+  position: absolute;
+  top: 43%;
+  left: -5px;
+}
+
+/* -----hover----- */
+
+.card__button-buy a:hover {
+  color: #22a7e9;
+}
+
+.card__link:hover {
+  background: linear-gradient(135deg, transparent 30px, #22a7e9 0) top left;
+}
+
+.card__link:hover .card__weight {
+  background: #22a7e9;
+}
+
+/* -----blue----- */
+
+.card__link.blue {
+  background: linear-gradient(135deg, transparent 30px, #1698d9 0) top left;
+  transition: 0.5s;
+}
+
+.card__link.blue .card__weight {
+  background: #1698d9;
+}
+
+/* -----active-red----- */
+
+.card__link.active-red {
+  background: linear-gradient(135deg, transparent 30px, #d91667 0) top left;
+}
+
+.card__link.active-red .card__weight {
+  background: #d91667;
+}
+
+/* -----active-hover----- */
+
+.card__link.active-red-hover {
+  background: linear-gradient(135deg, transparent 30px, #d91667 0) top left;
+}
+
+.card__link.active-red-hover .card__weight {
+  background: #d91667;
+}
+
+.card__link.active-red-hover:hover .card__weight {
+  background: #e52e7a;
+}
+
+.card__link.active-red-hover:hover {
+  background: linear-gradient(135deg, transparent 30px, #e52e7a 0) top left;
+}
+
+/* -----disable----- */
+
+.disable .card__link {
+  background: linear-gradient(135deg, transparent 30px, #b3b3b3 0) top left;
+  pointer-events: none;
+}
+
+.disable p,
+.disable span,
+.disable h2 {
+  color: #b3b3b3;
+}
+
+.disable .card__weight,
+.disable:hover .card__weight {
+  background: #b3b3b3;
+}
+
+.disable .card__weight p,
+.disable .card__weight span {
+  color: #ffffff;
+}
+
+.disable .card__image {
+  opacity: 0.5;
+}
+
+.disable .card__button-buy {
+  color: #ffff66;
+}
+
+/* TABLET */
+@media (max-width: 1114.98px) {
+  [class*='__container'] {
+    max-width: 970px;
+  }
+  .cards-list__container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  [class*='__container'] {
+    max-width: 450px;
+  }
+  .cards-list__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
